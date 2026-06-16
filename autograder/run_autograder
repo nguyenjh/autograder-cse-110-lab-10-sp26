@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Run the grading script
+python3 /autograder/source/grade.py
+
+# Check if results.json was created
+if [ ! -f /autograder/results/results.json ]; then
+    echo '{"score": 0, "output": "Grading script failed to run"}' > /autograder/results/results.json
+fi
+
+exit 0
